@@ -113,7 +113,7 @@ export const Dashboard = () => {
               <span className="text-[10px] font-bold bg-[#0a2240] text-amber-300 px-2 py-0.5 rounded font-mono">
                 CM DASHBOARD MONITORED
               </span>
-              <span className="text-xs text-slate-500 font-gujarati">ગુજરાત સરકાર • સચિવાલય ગાંધીનગર</span>
+              <span className="text-xs text-slate-500">Government of Gujarat • Sachivalaya, Gandhinagar</span>
             </div>
             <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 font-['Outfit'] mt-1">
               Gujarat Infrastructure Asset Command Center
@@ -130,7 +130,7 @@ export const Dashboard = () => {
             className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-[#0a2240] bg-amber-50 border border-amber-300 rounded-lg hover:bg-amber-100 shadow-sm transition-colors"
           >
             <MapPin className="w-4 h-4 text-amber-700" />
-            <span>ગુજરાત નકશો (GIS Map)</span>
+            <span>Gujarat GIS Map</span>
           </Link>
           <Link
             to="/assets/new"

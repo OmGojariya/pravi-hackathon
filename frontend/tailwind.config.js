@@ -38,7 +38,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'Shruti', 'Gujarati Sangam MN', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       }
     },
   },

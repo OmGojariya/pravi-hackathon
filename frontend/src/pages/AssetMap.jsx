@@ -100,7 +100,7 @@ export const AssetMap = () => {
             <span className="text-[10px] font-bold bg-[#0a2240] text-amber-300 px-2 py-0.5 rounded font-mono">
               GIS PORTAL • GUJARAT
             </span>
-            <span className="text-xs text-slate-500 font-gujarati">ભૌગોલિક માહિતી પ્રણાલી (GIS)</span>
+            <span className="text-xs text-slate-500">Geographic Information System (GIS)</span>
           </div>
           <h1 className="text-xl font-bold tracking-tight text-slate-900 font-['Outfit'] flex items-center gap-2 mt-1">
             <Compass className="w-5 h-5 text-amber-600" />

@@ -86,58 +86,58 @@ export const DashboardLayout = ({ children }) => {
 
   const navSections = [
     {
-      title: 'મુખ્ય સંચાલન (MAIN NAVIGATION)',
+      title: 'MAIN NAVIGATION',
       items: [
-        { label: 'ડેશબોર્ડ (Dashboard)', path: '/dashboard', icon: LayoutDashboard },
+        { label: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
       ],
     },
     {
-      title: 'એસેટ વ્યવસ્થાપન (ASSET INVENTORY)',
+      title: 'ASSET INVENTORY',
       items: [
         { label: 'All Infrastructure Assets', path: '/assets', icon: Layers },
         { label: 'Register New Asset', path: '/assets/new', icon: Plus, permission: ['SUPER_ADMIN', 'ADMIN', 'ASSET_MANAGER', 'PROJECT_MANAGER'] },
-        { label: 'GIS Asset Map (ગુજરાત નકશો)', path: '/assets/map', icon: MapPin },
-        { label: 'Asset Categories (વર્ગીકરણ)', path: '/categories', icon: FolderTree },
+        { label: 'GIS Infrastructure Map', path: '/assets/map', icon: MapPin },
+        { label: 'Asset Categories', path: '/categories', icon: FolderTree },
       ],
     },
     {
-      title: 'આયુષ્ય ચક્ર & આયોજન (LIFECYCLE)',
+      title: 'LIFECYCLE & PLANNING',
       items: [
         { label: 'Lifecycle Tracking', path: '/lifecycle', icon: Repeat },
         { label: 'Replacement Planning', path: '/replacement-planning', icon: CalendarCheck },
       ],
     },
     {
-      title: 'ક્ષેત્ર નિરીક્ષણ (FIELD INSPECTION)',
+      title: 'FIELD INSPECTION',
       items: [
         { label: 'Quality Inspections', path: '/inspections', icon: ClipboardList },
         { label: 'Overdue Inspections', path: '/inspections?due=true', icon: AlertTriangle },
       ],
     },
     {
-      title: 'જાળવણી & સમારકામ (MAINTENANCE)',
+      title: 'MAINTENANCE OPERATIONS',
       items: [
         { label: 'Maintenance Requests', path: '/maintenance', icon: Wrench },
-        { label: 'Work Orders (વર્ક ઓર્ડર)', path: '/work-orders', icon: FileSpreadsheet },
+        { label: 'Work Orders', path: '/work-orders', icon: FileSpreadsheet },
         { label: 'Preventive Schedules', path: '/maintenance/schedules', icon: Repeat },
       ],
     },
     {
-      title: 'યોજનાઓ & પ્રાપ્તિ (PROJECTS & TENDERS)',
+      title: 'PROJECTS & PROCUREMENT',
       items: [
-        { label: 'Capital Projects (યોજનાઓ)', path: '/projects', icon: Briefcase },
+        { label: 'Capital Projects', path: '/projects', icon: Briefcase },
         { label: 'Contractors & Vendors', path: '/vendors', icon: Truck },
-        { label: 'Procurement (ખરીદી/ટેન્ડર)', path: '/procurement', icon: ShoppingCart },
+        { label: 'Procurement & Tenders', path: '/procurement', icon: ShoppingCart },
       ],
     },
     {
-      title: 'અહેવાલ & પૃથ્થકરણ (REPORTS)',
+      title: 'REPORTS & ANALYTICS',
       items: [
         { label: 'Government Reports & CSV', path: '/reports', icon: BarChart3 },
       ],
     },
     {
-      title: 'વહીવટ & નિયંત્રણ (ADMINISTRATION)',
+      title: 'ADMINISTRATION & SECURITY',
       items: [
         { label: 'Official Directory', path: '/users', icon: Users, permission: ['SUPER_ADMIN', 'ADMIN'] },
         { label: 'Security & Audit Logs', path: '/audit-logs', icon: ShieldAlert, permission: ['SUPER_ADMIN', 'ADMIN'] },
@@ -157,14 +157,12 @@ export const DashboardLayout = ({ children }) => {
           <div className="flex items-center gap-2 sm:gap-4 divide-x divide-slate-700">
             <div className="flex items-center gap-1.5 font-semibold text-slate-100">
               <span className="text-sm">🇮🇳</span>
-              <span className="font-gujarati">ગુજરાત સરકાર</span>
-              <span className="text-slate-500 font-normal">|</span>
-              <span className="hidden sm:inline">GOVERNMENT OF GUJARAT</span>
+              <span>GOVERNMENT OF GUJARAT</span>
             </div>
             <div className="pl-2 sm:pl-4 hidden md:flex items-center gap-1 text-slate-400">
-              <span>માર્ગ અને મકાન વિભાગ</span>
-              <span className="text-slate-600">•</span>
               <span>Roads & Buildings Department</span>
+              <span className="text-slate-600">•</span>
+              <span>State Infrastructure Command</span>
             </div>
           </div>
 
@@ -204,7 +202,7 @@ export const DashboardLayout = ({ children }) => {
 
             <div className="hidden sm:flex items-center gap-1 text-amber-300 font-medium text-[11px]">
               <Globe className="w-3 h-3 text-amber-400" />
-              <span>English / ગુજરાતી</span>
+              <span>Official Government Portal</span>
             </div>
           </div>
         </div>
@@ -235,8 +233,8 @@ export const DashboardLayout = ({ children }) => {
                     GUJ-PVI
                   </span>
                 </div>
-                <p className="text-[11px] font-gujarati text-amber-200/90 font-medium leading-tight">
-                  ગુજરાત રાજ્ય ઇન્ફ્રાસ્ટ્રક્ચર એસેટ મેનેજમેન્ટ પોર્ટલ
+                <p className="text-[11px] text-amber-200/90 font-medium leading-tight">
+                  State Infrastructure Asset Lifecycle Management System
                 </p>
                 <p className="text-[10px] text-slate-300 hidden sm:block uppercase tracking-wider font-semibold">
                   Govt. of Gujarat • Gandhinagar
@@ -300,7 +298,7 @@ export const DashboardLayout = ({ children }) => {
               {showNotifMenu && (
                 <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white text-slate-900 rounded-xl shadow-2xl border-2 border-slate-200 overflow-hidden z-50">
                   <div className="p-3 bg-[#0a2240] text-white flex items-center justify-between border-b-2 border-amber-500">
-                    <span className="font-bold text-sm">સરકારી નોટિફિકેશન ({unreadCount})</span>
+                    <span className="font-bold text-sm">Official Notifications ({unreadCount})</span>
                     {unreadCount > 0 && (
                       <button
                         onClick={markAllRead}
@@ -430,7 +428,7 @@ export const DashboardLayout = ({ children }) => {
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-200">
                 STATE ASSET REGISTRY
               </span>
-              <p className="text-[10px] text-slate-400 font-gujarati">ગુજરાત રાજ્ય પોર્ટલ</p>
+              <p className="text-[10px] text-slate-400">State Infrastructure Portal</p>
             </div>
           </div>
 
@@ -502,7 +500,7 @@ export const DashboardLayout = ({ children }) => {
                   <GovEmblem className="w-6 h-8" variant="gold" />
                   <div>
                     <p className="font-bold text-white text-sm">InfraTrack Gujarat</p>
-                    <p className="text-[11px] font-gujarati text-amber-300">માર્ગ અને મકાન વિભાગ, ગુજરાત સરકાર</p>
+                    <p className="text-[11px] text-amber-300">Roads & Buildings Department, Govt. of Gujarat</p>
                   </div>
                 </div>
                 <p className="mt-1 text-[11px] text-slate-400">

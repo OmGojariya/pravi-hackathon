@@ -54,7 +54,7 @@ export const Login = () => {
       <div className="mb-4 text-center">
         <div className="inline-flex items-center gap-2 text-slate-300 text-xs font-semibold">
           <span>🇮🇳</span>
-          <span className="font-gujarati text-amber-300">ગુજરાત સરકાર</span>
+          <span className="text-amber-300 font-bold">STATE OF GUJARAT</span>
           <span className="text-slate-500">•</span>
           <span>GOVERNMENT OF GUJARAT</span>
         </div>
@@ -71,8 +71,8 @@ export const Login = () => {
           <h1 className="text-2xl font-extrabold tracking-tight font-['Outfit'] text-white">
             InfraTrack <span className="text-amber-400 font-serif">Gujarat</span>
           </h1>
-          <p className="text-xs font-gujarati text-amber-200 mt-0.5 font-medium">
-            ગુજરાત રાજ્ય ઇન્ફ્રાસ્ટ્રક્ચર એસેટ મેનેજમેન્ટ પોર્ટલ
+          <p className="text-xs text-amber-200 mt-0.5 font-medium">
+            State Infrastructure Asset Lifecycle Management System
           </p>
           <p className="text-[10px] text-slate-300 mt-1 uppercase tracking-wider font-semibold">
             Roads & Buildings Department • Gandhinagar

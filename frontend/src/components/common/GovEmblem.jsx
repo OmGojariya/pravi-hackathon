@@ -43,10 +43,10 @@ export const GovEmblem = ({ className = 'w-10 h-10', variant = 'gold' }) => {
           <rect x="15" y="103" width="70" height="5" rx="1.5" />
         </g>
       </svg>
-      <span className={`text-[8px] font-bold tracking-tight uppercase mt-0.5 ${
+      <span className={`text-[7px] font-bold tracking-wider uppercase mt-0.5 ${
         variant === 'white' ? 'text-amber-300' : variant === 'gold' ? 'text-amber-800' : 'text-slate-800'
       }`}>
-        सत्यमेવ જયતે
+        SATYAMEVA JAYATE
       </span>
     </div>
   );
