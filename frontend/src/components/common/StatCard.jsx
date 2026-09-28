@@ -18,11 +18,22 @@ export const StatCard = ({
     indigo: 'bg-indigo-50 text-indigo-600 border-indigo-100',
   };
 
+  const topBorderStyles = {
+    blue: 'border-t-4 border-t-[#0a2240]',
+    emerald: 'border-t-4 border-t-emerald-600',
+    amber: 'border-t-4 border-t-amber-600',
+    rose: 'border-t-4 border-t-rose-600',
+    purple: 'border-t-4 border-t-purple-600',
+    indigo: 'border-t-4 border-t-indigo-600',
+  };
+
   return (
     <div
       onClick={onClick}
-      className={`bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm hover:shadow-md transition-all ${
-        onClick ? 'cursor-pointer hover:border-brand-300' : ''
+      className={`bg-white rounded-xl border border-slate-200/90 p-5 shadow-sm hover:shadow-md transition-all ${
+        topBorderStyles[color] || topBorderStyles.blue
+      } ${
+        onClick ? 'cursor-pointer hover:border-amber-400' : ''
       }`}
     >
       <div className="flex items-center justify-between">

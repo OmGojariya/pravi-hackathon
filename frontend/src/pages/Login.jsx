@@ -3,6 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Building, ShieldCheck, QrCode, Lock, Mail, ArrowRight, UserCheck } from 'lucide-react';
 
+import { GovEmblem } from '../components/common/GovEmblem';
+
 export const Login = () => {
   const navigate = useNavigate();
   const { login, loginDemo } = useAuth();
@@ -40,22 +42,44 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-850 to-brand-950 flex flex-col justify-center items-center p-4">
+    <div className="min-h-screen bg-[#07192f] flex flex-col justify-center items-center p-4 relative overflow-hidden">
+      {/* Background state decorative elements */}
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Tricolor line */}
+      <div className="gov-tricolor-line fixed top-0 left-0 w-full" />
+
+      {/* Gov of Gujarat header banner */}
+      <div className="mb-4 text-center">
+        <div className="inline-flex items-center gap-2 text-slate-300 text-xs font-semibold">
+          <span>🇮🇳</span>
+          <span className="font-gujarati text-amber-300">ગુજરાત સરકાર</span>
+          <span className="text-slate-500">•</span>
+          <span>GOVERNMENT OF GUJARAT</span>
+        </div>
+      </div>
+
       {/* Container */}
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border-t-4 border-amber-600 overflow-hidden">
         {/* Header */}
-        <div className="bg-slate-900 text-white p-8 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl pointer-events-none" />
-          <div className="inline-flex p-3 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-400 mb-3 shadow-lg shadow-brand-500/30">
-            <Building className="w-7 h-7 text-white" />
+        <div className="bg-[#0a2240] text-white p-6 text-center relative">
+          <div className="flex justify-center mb-2">
+            <GovEmblem className="w-12 h-14" variant="gold" />
           </div>
-          <h1 className="text-2xl font-extrabold tracking-tight font-['Outfit']">InfraTrack</h1>
-          <p className="text-xs text-slate-300 mt-1 uppercase tracking-widest font-semibold">
-            Infrastructure Asset Lifecycle System
+          
+          <h1 className="text-2xl font-extrabold tracking-tight font-['Outfit'] text-white">
+            InfraTrack <span className="text-amber-400 font-serif">Gujarat</span>
+          </h1>
+          <p className="text-xs font-gujarati text-amber-200 mt-0.5 font-medium">
+            ગુજરાત રાજ્ય ઇન્ફ્રાસ્ટ્રક્ચર એસેટ મેનેજમેન્ટ પોર્ટલ
           </p>
-          <div className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-[11px] text-emerald-400 font-medium">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>State Enterprise Portal • ISO 55000</span>
+          <p className="text-[10px] text-slate-300 mt-1 uppercase tracking-wider font-semibold">
+            Roads & Buildings Department • Gandhinagar
+          </p>
+          <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#07192f] border border-amber-500/40 text-[11px] text-amber-300 font-medium">
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span>State Official Officer Login • ISO 55000</span>
           </div>
         </div>
 

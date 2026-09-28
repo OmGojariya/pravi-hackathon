@@ -102,27 +102,39 @@ export const Dashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900 font-['Outfit']">
-            Infrastructure Asset Command Center
-          </h1>
-          <p className="text-xs text-slate-500 mt-1">
-            Real-time condition, operational lifecycle, maintenance expenditure, and risk telemetry.
-          </p>
+      {/* Gujarat State Government Official Header Banner */}
+      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm border-t-4 border-amber-600 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-start gap-4">
+          <div className="hidden sm:flex p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800">
+            <TrendingUp className="w-7 h-7" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold bg-[#0a2240] text-amber-300 px-2 py-0.5 rounded font-mono">
+                CM DASHBOARD MONITORED
+              </span>
+              <span className="text-xs text-slate-500 font-gujarati">ગુજરાત સરકાર • સચિવાલય ગાંધીનગર</span>
+            </div>
+            <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 font-['Outfit'] mt-1">
+              Gujarat Infrastructure Asset Command Center
+            </h1>
+            <p className="text-xs text-slate-600 mt-0.5">
+              Comprehensive lifecycle tracking, condition ratings, and asset maintenance across 33 Districts of Gujarat.
+            </p>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
+
+        <div className="flex items-center gap-2 shrink-0">
           <Link
             to="/assets/map"
-            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 shadow-sm transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-[#0a2240] bg-amber-50 border border-amber-300 rounded-lg hover:bg-amber-100 shadow-sm transition-colors"
           >
-            <MapPin className="w-4 h-4 text-brand-600" />
-            <span>Open Asset Map</span>
+            <MapPin className="w-4 h-4 text-amber-700" />
+            <span>ગુજરાત નકશો (GIS Map)</span>
           </Link>
           <Link
             to="/assets/new"
-            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 shadow-sm transition-colors"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-[#e66000] hover:bg-[#cf5600] rounded-lg shadow-sm transition-colors"
           >
             <Plus className="w-4 h-4" />
             <span>Register Asset</span>

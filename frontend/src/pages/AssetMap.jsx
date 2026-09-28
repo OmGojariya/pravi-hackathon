@@ -94,14 +94,20 @@ export const AssetMap = () => {
   return (
     <div className="space-y-4">
       {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-t-4 border-amber-600">
         <div>
-          <h1 className="text-xl font-bold tracking-tight text-slate-900 font-['Outfit'] flex items-center gap-2">
-            <Compass className="w-5 h-5 text-brand-600" />
-            <span>Interactive Infrastructure Geospatial Map</span>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-bold bg-[#0a2240] text-amber-300 px-2 py-0.5 rounded font-mono">
+              GIS PORTAL • GUJARAT
+            </span>
+            <span className="text-xs text-slate-500 font-gujarati">ભૌગોલિક માહિતી પ્રણાલી (GIS)</span>
+          </div>
+          <h1 className="text-xl font-bold tracking-tight text-slate-900 font-['Outfit'] flex items-center gap-2 mt-1">
+            <Compass className="w-5 h-5 text-amber-600" />
+            <span>Gujarat State Infrastructure Geospatial GIS Map</span>
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
-            Real-time geospatial asset telemetry color-coded by structural condition.
+            Real-time geospatial asset telemetry across Ahmedabad, Gandhinagar, Surat, Vadodara, and Rajkot.
           </p>
         </div>
 

@@ -5,8 +5,32 @@
 @layer base {
   body {
     @apply bg-slate-50 text-slate-900 font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 }
+
+.font-gujarati {
+  font-family: 'Noto Sans Gujarati', 'Shruti', 'Gujarati Sangam MN', sans-serif;
+}
+
+/* Indian National Tricolor Bar */
+.gov-tricolor-line {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #ff9933 0%,
+    #ff9933 33.33%,
+    #ffffff 33.33%,
+    #ffffff 66.66%,
+    #138808 66.66%,
+    #138808 100%
+  );
+}
+
+.gov-gold-border {
+  border-top: 3px solid #e66000;
+}
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
